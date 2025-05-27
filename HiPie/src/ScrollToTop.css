@@ -1,0 +1,45 @@
+.floating-button {
+  position: fixed;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
+  color: white;
+  background-color: #f94144;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  animation: floatUpDown 3s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.floating-button:hover {
+  background-color: #f3722c;
+}
+
+/* Scroll Up button slightly above bottom */
+.floating-up {
+  bottom: 90px;
+  animation-delay: 0s;
+}
+
+/* Scroll Down button near bottom */
+.floating-down {
+  bottom: 20px;
+  animation-delay: 1.5s; /* opposite phase */
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

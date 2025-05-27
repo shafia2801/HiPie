@@ -1,0 +1,118 @@
+.cart-container {
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.empty-message {
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 5rem;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.cart-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.cart-item {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 1.2rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.cart-item:hover {
+  transform: translateY(-10px) scale(1.025);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2), 0 0 50px rgba(255, 255, 255, 0.1);
+}
+
+/* Image styling with smooth zoom */
+.cart-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease-in-out, filter 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cart-item:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.1);
+}
+
+.cart-item-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.cart-item-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.cart-item p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+/* Button styles with hover glow */
+.cart-item button {
+  border: none;
+  padding: 8px 12px;
+  margin: 6px 4px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-item button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+.cart-item button:nth-child(5) { background-color: #4caf50; } /* + */
+.cart-item button:nth-child(6) { background-color: #ff9800; } /* - */
+.cart-item button:nth-child(7) { background-color: #f44336; } /* x */
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
