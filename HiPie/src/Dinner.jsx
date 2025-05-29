@@ -20,8 +20,10 @@ function Dinner(){
     return(
         <>
         <div className="dinner-container">
+                        <div className="dinner-title-wrapper">
+
      <h1 className="dinner-title">🌙 Savour Your Dinner Moments 🍽️</h1>
-      <ul className="dinner-list">{item}</ul>
+     </div> <ul className="dinner-list">{item}</ul>
     </div>
           <FloatingScrollButtons />
 

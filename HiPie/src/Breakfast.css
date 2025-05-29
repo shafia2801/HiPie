@@ -4,12 +4,22 @@
   color: #fff;
 }
 
+.breakfast-title-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 1rem; /* optional padding for mobile */
+  box-sizing: border-box;
+}
+
 .breakfast-title {
-  text-align: center;
+  display: inline-block;      /* Make width fit content */
+  white-space: nowrap;
+  box-sizing: content-box;
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  color: #fff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  animation: fadeInDown 0.6s ease;
+  margin-bottom: 2rem;
+  animation: slideMarquee 15s linear infinite;
 }
 
 .breakfast-list {
@@ -98,21 +108,6 @@
     transform: translateY(0);
   }
 }
-.breakfast-title-wrapper {
-  width: 100%;
-  overflow: hidden;
-}
-.breakfast-title {
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  width: 100%;
-  font-size: 2.5rem;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  margin-bottom: 2rem;
-  animation: slideMarquee 15s linear infinite;
-}
 
 /* Marquee animation */
 @keyframes slideMarquee {
@@ -121,5 +116,12 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+/* Responsive font size for marquee on small screens */
+@media (max-width: 600px) {
+  .breakfast-title {
+    font-size: 1.8rem;
   }
 }

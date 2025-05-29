@@ -22,7 +22,8 @@ function Lunch(){
     return(
         <>
         <div className="lunch-container">
-      <h1 className="lunch-title">🍽️ Enjoy Your Delicious Lunch Menu 🍛</h1>
+            <div className="lunch-title-wrapper">
+      <h1 className="lunch-title">🍽️ Enjoy Your Delicious Lunch Menu 🍛</h1> </div>
       <ul className="lunch-list">{item}</ul>
     </div>       <FloatingScrollButtons />
 

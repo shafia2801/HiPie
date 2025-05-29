@@ -1,6 +1,8 @@
-body, ul {
+/* Reset */
+body, ul, li {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -9,61 +11,174 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Navbar */
 .navbar {
-  background-color:rgb(173, 41, 23);
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  background: linear-gradient(90deg, #a83232, #c94c4c);
+  padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-.navbar nav ul {
-  list-style-type: none;
+.navbar nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin: 0;
+  flex-wrap: wrap;
 }
 
-
-.navbar nav ul li {
-  margin: 0 20px;
-}
-
-
-.navbar nav ul li a {
+/* Logo / Brand */
+.brand {
   color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 8px 12px;
-  position: relative;
-  transition: color 0.3s;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  /* Gradient text with animation */
+  background: linear-gradient(270deg, #ccc, #ccc, #ccc);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 8s ease infinite;
+
+  /* Text shadow for some depth */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+
+  /* Smooth transform and letter-spacing */
+  transition: transform 0.4s ease, letter-spacing 0.4s ease, text-shadow 0.4s ease;
+}
+
+.brand:hover {
+  transform: scale(1.1) rotate(2deg);
+  letter-spacing: 4px;
+  text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
-.navbar nav ul li a::after {
-  content: '';
+
+/* Nav Links */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.navbar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.08);
+}
+
+/* Animated underline */
+.navbar ul li a::after {
+  content: "";
   position: absolute;
+  width: 0%;
+  height: 2px;
   left: 0;
   bottom: 0;
-  height: 2px;
-  width: 0;
-  background-color: #fff;
-  transition: width 0.3s ease;
+  background: white;
+  transition: width 0.3s;
 }
 
-
-.navbar nav ul li a:hover::after {
+.navbar ul li a:hover::after {
   width: 100%;
 }
 
+/* Cart count badge */
+.cart-count {
+  background-color: #fff;
+  color: #c94c4c;
+  font-weight: 700;
+  border-radius: 50%;
+  padding: 2px 7px;
+  margin-left: 5px;
+  font-size: 14px;
+}
 
+/* Main content padding */
 main {
-  padding: 20px;
-  margin-top: 60px;
+  padding: 2rem;
+  margin-top: 80px;
+}
+
+/* Hamburger Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 20px;
+  }
+
+  .navbar ul li a {
+    font-size: 15px;
+    padding: 10px;
+  }
 }
