@@ -3,15 +3,15 @@ const productslice=createSlice({
     name:'products',
     initialState:{
         Breakfast:[
-         { name: 'idli', price: 40.13, image: "/HiPie/images/idli.png" },
-    { name: 'Dosa', price: 60.76, image: "/images/dosa.png" },
-    { name: 'poori', price: 70.34, image: "/images/poori.png" },
+         { name: 'idli', price: 40.13, image: "images/idli.png" },
+    { name: 'Dosa', price: 60.76, image: "images/dosa.png" },
+    { name: 'poori', price: 70.34, image: "images/poori.png" },
     { name: 'chapati', price: 120.13, image: "/images/chapati.png" },
     { name: 'vada', price: 90.16, image: "/images/vada.png" },
     { name: 'upma', price: 60.56, image: "/images/upma.png" }
   ],
   Lunch: [
-    { name: 'Biryani', price: 400.13, image: "/HiPie/images/biryani.png" },
+    { name: 'Biryani', price: 400.13, image: "images/biryani.png" },
     { name: 'Roti', price: 100.76, image: "/images/roti.png" },
     { name: 'fried rice', price: 130.34, image: "/images/fried.png" },
     { name: 'paneer rice', price: 260.13, image: "/images/paneer.png" },
