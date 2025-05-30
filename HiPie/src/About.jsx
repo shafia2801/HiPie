@@ -5,8 +5,9 @@ function About() {
   return (
     <>
       <div className="about-video-container">
-        <video className="about-bg-video" autoPlay loop muted playsInline>
-          <source src="/videos/about.mp4" type="video/mp4" />
+<video className="about-bg-video" autoPlay loop muted playsInline>
+  <source src={`${import.meta.env.BASE_URL}videos/about.mp4`} type="video/mp4" />
+
           Your browser does not support the video tag.
         </video>
       </div>

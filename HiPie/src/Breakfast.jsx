@@ -12,8 +12,8 @@ function Breakfast(){
     const bf=useSelector(state=> state.products.Breakfast);
     const item=bf.map((product,index)=>(
         <li key={index} className="breakfast-item">
-             <img src={`images/${product.image}`} alt={product.name} width="100"/>
-      <span>  {product.name} -{product.price} </span>
+             <img src={`${import.meta.env.BASE_URL}${product.image}`} alt={product.name} width="100"/>
+      <span>  {product.name} - {product.price} </span>
          <button onClick={()=>handleAddtocart(product)}>+</button>
         </li>
         ));

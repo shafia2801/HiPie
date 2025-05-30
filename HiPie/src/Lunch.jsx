@@ -12,7 +12,7 @@ function Lunch(){
     const l=useSelector(state=> state.products.Lunch);
     const item=l.map((product,index)=>(
         <li key={index} className="lunch-item">
-             <img src={`images/${product.image}`} alt={product.name} width="100"/>
+             <img src={`${import.meta.env.BASE_URL}${product.image}`} alt={product.name} width="100"/>
       <span>  {product.name} -{product.price} </span>
       
                 <button onClick={()=>handleAddtocart(product)}>+</button>

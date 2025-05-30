@@ -17,7 +17,7 @@ function Cart() {
         <ul className="cart-list">
           {cart.map((item, index) => (
             <li key={index} className="cart-item" style={{ animationDelay: `${index * 0.1}s` }}>
-              <img src={`images/${item.image}`} alt={item.name} />
+<img src={`${import.meta.env.BASE_URL}${item.image}`} alt={item.name} />
               <div className="cart-item-name">{item.name}</div>
               <div className="cart-item-price">${item.price}</div>
               <p>quantity:{item.quantity}</p>

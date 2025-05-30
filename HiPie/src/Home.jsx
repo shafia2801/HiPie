@@ -16,15 +16,15 @@ function Home() {
 
       <div className="menu-preview">
         <Link to="/breakfast" className="menu-card">
-          <img src="images/breakfast.png" alt="Breakfast" loading="lazy" />
+<img src={`${import.meta.env.BASE_URL}images/breakfast.png`} alt="Breakfast" loading="lazy" />
           <h3>Breakfast</h3>
         </Link>
         <Link to="/lunch" className="menu-card">
-          <img src="images/lunch.png" alt="Lunch" loading="lazy" />
+<img src={`${import.meta.env.BASE_URL}images/lunch.png`} alt="Lunch" loading="lazy" />
           <h3>Lunch</h3>
         </Link>
         <Link to="/dinner" className="menu-card">
-          <img src="images/dinner.png" alt="Dinner" loading="lazy" />
+<img src={`${import.meta.env.BASE_URL}images/dinner.png`} alt="Dinner" loading="lazy" />
           <h3>Dinner</h3>
         </Link>
       </div>

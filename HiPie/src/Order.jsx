@@ -41,7 +41,7 @@ function Order() {
           <ul className="order-items">
             {cart.map((item, index) => (
               <li key={index} className="order-item">
-                <img src={`images/${item.image}`} alt={item.name} />
+<img src={`${import.meta.env.BASE_URL}${item.image}`} alt={item.name} />
                 <div>
                   <h3>{item.name}</h3>
                   <p>Price: ${item.price}</p>
