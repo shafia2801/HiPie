@@ -3,29 +3,30 @@ const productslice=createSlice({
     name:'products',
     initialState:{
         Breakfast:[
-            {name:'idli',price:40.13,image:"idli.png"},
-            {name:'Dosa',price:60.76,image:"dosa.png"},
-            {name:'poori',price:70.34,image:"poori.png"},{name:'chapati',price:120.13,image:"chapati.png"},
-            {name:'vada',price:90.16,image:"vada.png"},
-            {name:'upma',price:60.56,image:"upma.png"}
-        ],
-        Lunch:[
-            {name:'Biryani',price:400.13,image:"biryani.png"},
-            {name:'Roti',price:100.76,image:"roti.png"},
-            {name:'fried rice',price:130.34,image:"fried.png"},
-            {name:'paneer rice',price:260.13,image:"paneer.png"},
-            {name:'dal rice',price:160.76,image:"dal.png"},
-            {name:'goongura rice',price:150.34,image:"goongura.png"}
-        ],
-         Dinner:[
-            {name:'Chicken Biryani',price:490.13,image:"biryani.png"},
-            {name:'naan',price:100.76,image:"roti.png"},
-            {name:'fried rice',price:130.34,image:"fried.png"},
-            {name:'paneer rice',price:260.13,image:"paneer.png"},
-            {name:'dal rice',price:245.76,image:"dal.png"},
-            {name:'goongura rice',price:145.34,image:"goongura.png"}
-        ]
-    },
+         { name: 'idli', price: 40.13, image: "/HiPie/images/idli.png" },
+    { name: 'Dosa', price: 60.76, image: "/images/dosa.png" },
+    { name: 'poori', price: 70.34, image: "/images/poori.png" },
+    { name: 'chapati', price: 120.13, image: "/images/chapati.png" },
+    { name: 'vada', price: 90.16, image: "/images/vada.png" },
+    { name: 'upma', price: 60.56, image: "/images/upma.png" }
+  ],
+  Lunch: [
+    { name: 'Biryani', price: 400.13, image: "/HiPie/images/biryani.png" },
+    { name: 'Roti', price: 100.76, image: "/images/roti.png" },
+    { name: 'fried rice', price: 130.34, image: "/images/fried.png" },
+    { name: 'paneer rice', price: 260.13, image: "/images/paneer.png" },
+    { name: 'dal rice', price: 160.76, image: "/images/dal.png" },
+    { name: 'goongura rice', price: 150.34, image: "/images/goongura.png" }
+  ],
+  Dinner: [
+    { name: 'Chicken Biryani', price: 490.13, image: "/images/biryani.png" },
+    { name: 'naan', price: 100.76, image: "/images/roti.png" },
+    { name: 'fried rice', price: 130.34, image: "/images/fried.png" },
+    { name: 'paneer rice', price: 260.13, image: "/images/paneer.png" },
+    { name: 'dal rice', price: 245.76, image: "/images/dal.png" },
+    { name: 'goongura rice', price: 145.34, image: "/images/goongura.png" }
+  ]
+},
     reducer:{}
 });
 

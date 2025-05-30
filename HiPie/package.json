@@ -2,7 +2,7 @@
   "name": "react-ecom-apply",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://shafia2801.github.io/HiPie",
+"homepage": "https://shafia2801.github.io/HiPie/",
   "type": "module",
   "scripts": {
     "dev": "vite",
